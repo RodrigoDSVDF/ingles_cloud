@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Fast — Aula 1: To Be</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--bd:#334155;--tx:#f1f5f9;--mu:#94a3b8;--pr:#38bdf8;--ok:#22c55e;--no:#ef4444;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a}}
+:root[data-theme="light"]{--bg:#f1f5f9;--card:#fff;--bd:#cbd5e1;--tx:#0f172a;--mu:#475569;--pr:#0369a1;color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+body{background:var(--bg);color:var(--tx);min-height:100vh;padding:16px;display:flex;flex-direction:column;align-items:center}
+main{width:100%;max-width:640px}
+h1{font-size:1.4rem;text-align:center}h1 span{color:var(--pr)}
+.sub{text-align:center;color:var(--mu);font-size:.85rem;margin:4px 0 14px}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px}
+nav button{flex:none;background:var(--card);color:var(--mu);border:1px solid var(--bd);padding:9px 13px;border-radius:99px;font-size:.85rem;font-weight:600;cursor:pointer}
+nav button.on{background:var(--pr);color:#0f172a;border-color:var(--pr)}
+section{display:none;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px}
+section.on{display:block}
+h2{font-size:1.1rem;margin-bottom:10px;color:var(--pr)}
+p,li{line-height:1.55;font-size:.95rem;margin-bottom:8px}
+ul{padding-left:20px}
+.box{background:rgba(56,189,248,.1);border-left:4px solid var(--pr);padding:10px 12px;border-radius:8px;margin:10px 0;font-size:.92rem}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:420px}
+th,td{border:1px solid var(--bd);padding:8px;text-align:left}
+th{background:rgba(56,189,248,.15)}
+.ex{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--bd);padding:8px 0;font-size:.93rem}
+.ex b{color:var(--pr)}.ex span{color:var(--mu);text-align:right}
+.bad{color:var(--no)}.good{color:var(--ok)}
+.q{margin-bottom:16px}.q p{font-weight:600}
+.opts{display:grid;gap:6px}
+.opts button,.btn{background:transparent;color:var(--tx);border:1px solid var(--bd);padding:10px;border-radius:10px;text-align:left;cursor:pointer;font-size:.92rem}
+.opts button:hover,.btn:hover{border-color:var(--pr)}
+.opts button.right{background:rgba(34,197,94,.2);border-color:var(--ok)}
+.opts button.wrong{background:rgba(239,68,68,.2);border-color:var(--no)}
+.fb{font-size:.85rem;color:var(--mu);margin-top:6px;min-height:1em}
+.btn{text-align:center;background:var(--pr);color:#0f172a;border:none;font-weight:700}
+.btn.ghost{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+input{width:100%;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:.95rem;margin:4px 0}.gt{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}.gt button{padding:6px 11px;border-radius:99px;border:1px solid var(--bd);background:transparent;color:var(--mu);font-size:.78rem;cursor:pointer}.gt button.on{background:var(--pr);color:#0f172a;border-color:var(--pr)}.score{font-weight:700;text-align:center;margin:10px 0}
+.fc{height:220px;perspective:1000px;cursor:pointer;margin:6px 0 12px}
+.fi{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.fl .fi{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;border:1px solid var(--bd);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;gap:6px}
+.front{background:var(--bg)}.back{background:linear-gradient(135deg,#0ea5e9,#4338ca);color:#fff;transform:rotateY(180deg)}
+.big{font-size:1.9rem;font-weight:700}.ph{color:var(--mu);font-size:.9rem}.back .ph{color:#e0f2fe}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}
+.cnt{text-align:center;color:var(--mu);font-size:.8rem}
+.bar{height:8px;border-radius:99px;background:var(--bg);border:1px solid var(--bd);overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pr),var(--ok));transition:width .4s}
+</style>
+</head>
+<body>
+<main>
+<h1>🇬🇧 English <span>Fast</span> · Aula 1</h1>
+<p class="sub">O verbo TO BE no presente (am / is / are)</p>
+<div class="bar"><i id="prog"></i></div>
+<nav id="nav"></nav>
+
+<section id="s0" class="on">
+<h2>1. A regra</h2>
+<p>Em inglês, <b>to be</b> significa <b>ser</b> e <b>estar</b> ao mesmo tempo. No presente ele muda conforme quem fala (o <i>sujeito</i>, ou seja, quem faz ou é algo na frase).</p>
+<div class="box">Em inglês o sujeito é <b>obrigatório</b>. Não dá para dizer só “Sou brasileiro”: tem que ser <b>I am</b> Brazilian.</div>
+<div class="wrap"><table>
+<tr><th>Pessoa</th><th>Afirmativa</th><th>Contração</th><th>Negativa</th></tr>
+<tr><td>I (eu)</td><td>I am</td><td>I’m</td><td>I’m not</td></tr>
+<tr><td>You (você/vocês)</td><td>You are</td><td>You’re</td><td>You aren’t</td></tr>
+<tr><td>He (ele)</td><td>He is</td><td>He’s</td><td>He isn’t</td></tr>
+<tr><td>She (ela)</td><td>She is</td><td>She’s</td><td>She isn’t</td></tr>
+<tr><td>It (isso/coisa/animal)</td><td>It is</td><td>It’s</td><td>It isn’t</td></tr>
+<tr><td>We (nós)</td><td>We are</td><td>We’re</td><td>We aren’t</td></tr>
+<tr><td>They (eles/elas)</td><td>They are</td><td>They’re</td><td>They aren’t</td></tr>
+</table></div>
+<p style="margin-top:12px"><b>Negativa:</b> coloque <b>not</b> depois do verbo. <b>Pergunta:</b> inverta, o verbo vem antes do sujeito.</p>
+<div class="ex"><b>You are tired.</b><span>Você está cansado.</span></div>
+<div class="ex"><b>Are you tired?</b><span>Você está cansado?</span></div>
+<p style="margin-top:10px"><b>Respostas curtas:</b> Yes, I am. / No, I’m not. · Yes, he is. / No, he isn’t. · Yes, they are. / No, they aren’t.</p>
+</section>
+
+<section id="s1">
+<h2>2. Usos no dia a dia</h2>
+<div class="ex"><b>I’m Olá.</b><span>Eu sou o Olá. (identidade)</span></div>
+<div class="ex"><b>She is a teacher.</b><span>Ela é professora. (profissão)</span></div>
+<div class="ex"><b>We are from Brazil.</b><span>Nós somos do Brasil. (origem)</span></div>
+<div class="ex"><b>He is 30 years old.</b><span>Ele tem 30 anos. (idade)</span></div>
+<div class="ex"><b>I’m hungry.</b><span>Estou com fome. (sentimento)</span></div>
+<div class="ex"><b>The house is big.</b><span>A casa é grande. (descrição)</span></div>
+<div class="ex"><b>They are at home.</b><span>Eles estão em casa. (localização)</span></div>
+<h2 style="margin-top:16px">Erros comuns de brasileiros</h2>
+<ul>
+<li class="bad">✗ I have 30 years. → <span class="good">✓ I am 30 years old.</span> (idade usa to be, não “ter”)</li>
+<li class="bad">✗ Is hot today. → <span class="good">✓ It is hot today.</span> (não pode omitir o sujeito)</li>
+<li class="bad">✗ She are my sister. → <span class="good">✓ She is my sister.</span></li>
+<li class="bad">✗ I am hungry? → <span class="good">✓ Am I hungry? / Are you hungry?</span></li>
+<li class="bad">✗ I am agree. → <span class="good">✓ I agree.</span> (nem todo “estar” vira to be)</li>
+</ul>
+<div class="box"><b>To be x outros verbos:</b> to be liga o sujeito a uma característica (“I am tall”). Outros verbos mostram ação (“I run”, “I eat”). Não misture: “I am run” está errado.</div>
+</section>
+
+<section id="s2">
+<h2>3. Flashcards</h2>
+<div class="row" style="margin-bottom:10px">
+<button class="btn ghost" data-deck="words">📚 5 palavras novas</button>
+<button class="btn ghost" data-deck="be">🔁 To be</button>
+</div>
+<div class="fc" id="fc"><div class="fi">
+<div class="face front"><div class="big" id="fw"></div><div class="ph" id="fp"></div><div class="ph">Toque para virar</div></div>
+<div class="face back"><div class="big" id="bw"></div><div class="ph" id="be2"></div></div>
+</div></div>
+<div class="cnt" id="cc"></div>
+<div class="row" style="margin-top:10px">
+<button class="btn ghost" id="pv">← Anterior</button>
+<button class="btn ghost" id="sp">🔊 Ouvir</button>
+<button class="btn" id="nx">Próximo →</button>
+</div>
+</section>
+
+<section id="s3">
+<h2>4. Exercícios</h2>
+<p class="cnt" style="margin-bottom:10px">Mais de 100 exercícios em 9 grupos. Escolha um grupo ou faça todos!</p><div class="gt" id="gt"></div><div id="qs"></div>
+<div class="score" id="sc"></div>
+<button class="btn" style="width:100%" id="rs">Recomeçar</button>
+</section>
+
+<section id="s4">
+<h2>5. Resumo</h2>
+<ul>
+<li>To be = ser/estar: <b>I am, you/we/they are, he/she/it is</b>.</li>
+<li>Negativa com <b>not</b> (isn’t, aren’t, I’m not); pergunta invertendo (Are you…?).</li>
+<li>Sujeito sempre aparece; idade e sentimentos usam to be.</li>
+</ul>
+<div class="box"><b>Próxima aula:</b> To be no passado (was / were) e futuro (will be), depois pronomes pessoais e possessivos.</div>
+</section>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(i){return document.getElementById(i)};
+var KEY='englishfast.aula1.v1';
+var st={score:{},seen:{}};
+try{var r=localStorage.getItem(KEY);if(r)st=JSON.parse(r)}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+
+var tabs=['A regra','Usos e erros','Flashcards','Exercícios','Resumo'];
+var nav=$('nav');
+tabs.forEach(function(t,i){
+  var b=document.createElement('button');b.textContent=t;
+  b.onclick=function(){show(i)};nav.appendChild(b);
+});
+function show(i){
+  for(var k=0;k<tabs.length;k++){
+    $('s'+k).classList.toggle('on',k===i);
+    nav.children[k].classList.toggle('on',k===i);
+  }
+  st.seen[i]=1;save();prog();
+}
+function prog(){
+  var n=Object.keys(st.seen).length,q=Object.keys(st.score).length?1:0;
+  $('prog').style.width=Math.min(100,Math.round((n/tabs.length)*100))+'%';
+}
+
+/* Flashcards */
+var DECKS={
+words:[
+['Student','/STIÚ-dent/','Estudante','She is a student.'],
+['Teacher','/TÍ-tchâr/','Professor(a)','He is a teacher.'],
+['Tired','/TAI-êrd/','Cansado','I’m tired today.'],
+['Hungry','/RÂN-gri/','Com fome','We are hungry.'],
+['Brazilian','/bra-ZÍL-ien/','Brasileiro(a)','They are Brazilian.']],
+be:[
+['I ___','','am','I am happy.'],
+['You ___','','are','You are late.'],
+['He ___','','is','He is my brother.'],
+['She ___','','is','She is a doctor.'],
+['It ___','','is','It is cold.'],
+['We ___','','are','We are friends.'],
+['They ___','','are','They are at home.']]
+};
+var deck='words',ci=0;
+function card(){
+  var d=DECKS[deck][ci];
+  $('fc').classList.remove('fl');
+  $('fw').textContent=d[0];$('fp').textContent=d[1];
+  $('bw').textContent=d[2];$('be2').textContent=d[3];
+  $('cc').textContent=(ci+1)+' / '+DECKS[deck].length;
+}
+$('fc').onclick=function(){this.classList.toggle('fl')};
+$('nx').onclick=function(){ci=(ci+1)%DECKS[deck].length;card()};
+$('pv').onclick=function(){ci=(ci-1+DECKS[deck].length)%DECKS[deck].length;card()};
+$('sp').onclick=function(){
+  if(!('speechSynthesis' in window))return;
+  var d=DECKS[deck][ci];
+  var u=new SpeechSynthesisUtterance(deck==='be'?d[3]:d[0]);
+  u.lang='en-US';u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u);
+};
+document.querySelectorAll('[data-deck]').forEach(function(b){
+  b.onclick=function(){deck=b.getAttribute('data-deck');ci=0;card()};
+});
+
+/* Exercícios */
+var Q0=[
+['Complete: I ___ Brazilian.',['am','is','are'],0,'Com “I” usamos sempre “am”.'],
+['Complete: She ___ a teacher.',['am','is','are'],1,'She/he/it usam “is”.'],
+['Complete: They ___ at home.',['is','am','are'],2,'They/we/you usam “are”.'],
+['Traduza: Eu estou cansado.',['I tired.','I am tired.','Am tired.'],1,'O sujeito “I” e o verbo “am” são obrigatórios.'],
+['Contração de “He is”:',['He’s','Hes','He’is'],0,'He is → He’s, com apóstrofo.'],
+['Negativa de “We are happy”:',['We not are happy.','We aren’t happy.','We don’t happy.'],1,'Usamos “aren’t” (are not). “Don’t” é para outros verbos.'],
+['Corrija: “I have 25 years.”',['I am 25 years old.','I have 25 years old.','I am 25 years.'],0,'Em inglês, idade usa to be + years old.'],
+['Resposta curta: “Is he a doctor?” (não)',['No, he not.','No, he isn’t.','No, he doesn’t.'],1,'A resposta repete o to be: No, he isn’t.']
+];
+var done=0,ok=0;
+function norm(s){return s}
+function build(){
+  var box=$('qs');box.innerHTML='';done=0;ok=0;$('sc').textContent='';
+  Q.forEach(function(q,i){
+    var d=document.createElement('div');d.className='q';
+    var p=document.createElement('p');p.textContent=(i+1)+'. '+q[0];d.appendChild(p);
+    var o=document.createElement('div');o.className='opts';
+    var fb=document.createElement('div');fb.className='fb';
+    q[1].forEach(function(t,j){
+      var b=document.createElement('button');b.textContent=t;
+      b.onclick=function(){
+        if(d.getAttribute('data-d'))return;
+        d.setAttribute('data-d','1');done++;
+        var btns=o.children;
+        if(j===q[2]){ok++;b.className='right';fb.textContent='✓ Correto! '+q[3]}
+        else{b.className='wrong';btns[q[2]].className='right';fb.textContent='✗ '+q[3]}
+        if(done===Q.length){
+          $('sc').textContent='Você acertou '+ok+' de '+Q.length+(ok>=6?' 🎉 Pode dizer “entendi”!':' — releia a regra e tente de novo.');
+          st.score.best=Math.max(st.score.best||0,ok);save();
+        }
+      };
+      o.appendChild(b);
+    });
+    d.appendChild(o);d.appendChild(fb);box.appendChild(d);
+  });
+}
+var norm=function(s){return s.toLowerCase().replace(/[’‘`]/g,"'").replace(/[.?!]+$/,'').replace(/\s+/g,' ').trim()};
+var cap=function(s){return s.charAt(0).toUpperCase()+s.slice(1)};
+var mc=function(p,o,a,w){return{t:'m',p:p,o:o,a:a,w:w}},ty=function(p,a,w){return{t:'t',p:p,a:a,w:w}};
+var SB=[['I','am','a student'],['You','are','late'],['He','is','my brother'],['She','is','a doctor'],['It','is','cold today'],['We','are','friends'],['They','are','at school'],['My mother','is','tired'],['The books','are','on the table'],['Ana and I','are','Brazilian'],['My dog','is','big'],['You and Pedro','are','hungry'],['The children','are','happy'],['Carlos','is','my teacher']];
+var RULE='Use am com I; is com he/she/it e um só (My mother, Carlos); are com you/we/they e vários (The books, Ana and I).';
+var G=[
+['Básico',Q0.map(function(q){return mc(q[0],q[1],q[2],q[3])})],
+['Completar',SB.map(function(s){return mc('Complete: '+s[0]+' ___ '+s[2]+'.',['am','is','are'],['am','is','are'].indexOf(s[1]),RULE)})],
+['Negativa',SB.map(function(s){var r=s[2],f=s[0]+' '+s[1]+' not '+r,c=s[0]==='I'?"I'm not "+r:s[0]+' '+(s[1]==='is'?"isn't ":"aren't ")+r;return ty('Escreva na negativa: '+s[0]+' '+s[1]+' '+r+'.',[f,c],'Coloque not depois do verbo (is not = isn’t, are not = aren’t, I’m not).')})],
+['Pergunta',SB.map(function(s){return ty('Transforme em pergunta: '+s[0]+' '+s[1]+' '+s[2]+'.',[cap(s[1])+' '+s[0]+' '+s[2]],'Na pergunta o verbo vem antes do sujeito.')})],
+['Resp. curtas',[['Is he a doctor? (sim)',['yes, he is']],['Are you tired? (não, eu)',["no, i'm not",'no, i am not']],['Is she a teacher? (não)',["no, she isn't",'no, she is not']],['Are they Brazilian? (sim)',['yes, they are']],['Is it cold? (não)',["no, it isn't",'no, it is not']],['Are we late? (sim)',['yes, we are']],['Am I right? (sim, você)',['yes, you are']],['Is your mother at home? (sim)',['yes, she is']],['Are Ana and Pedro friends? (sim)',['yes, they are']],['Is the car new? (não)',["no, it isn't",'no, it is not']]].map(function(x){return ty(x[0],x[1],'A resposta curta repete o to be (Yes, he is. / No, he isn’t.). Com “am”, só na afirmativa de “you”: Yes, you are.')})],
+['Traduzir',[['Eu sou estudante.',['i am a student',"i'm a student"]],['Ela é professora.',['she is a teacher',"she's a teacher"]],['Nós estamos cansados.',['we are tired',"we're tired"]],['Eles são brasileiros.',['they are brazilian',"they're brazilian"]],['Você está com fome.',['you are hungry',"you're hungry"]],['Ele não é médico.',['he is not a doctor',"he isn't a doctor","he's not a doctor"]],['Eu não estou em casa.',['i am not at home',"i'm not at home"]],['Ela tem 20 anos.',['she is 20 years old',"she's 20 years old"]],['Você é professor?',['are you a teacher']],['Eles estão no parque.',['they are in the park','they are at the park',"they're in the park","they're at the park"]],['Nós somos amigos.',['we are friends',"we're friends"]],['Meu pai está cansado.',['my father is tired',"my father's tired",'my dad is tired']],['Ela não está feliz.',['she is not happy',"she isn't happy","she's not happy"]],['Elas são minhas irmãs.',['they are my sisters',"they're my sisters"]]].map(function(x){return ty('Traduza: '+x[0],x[1],'Lembre: sujeito obrigatório + am/is/are.')})],
+['Corrigir',[['I have 25 years.',['i am 25 years old',"i'm 25 years old"]],['She are my sister.',['she is my sister',"she's my sister"]],['Is hot today.',['it is hot today',"it's hot today"]],['They is students.',['they are students',"they're students"]],['He am a doctor.',['he is a doctor',"he's a doctor"]],['We is from Brazil.',['we are from brazil',"we're from brazil"]],['I am agree.',['i agree']],['You is late.',['you are late',"you're late"]],['Are he tired?',['is he tired']],['I no am hungry.',['i am not hungry',"i'm not hungry"]],['Is you a student?',['are you a student']],['My brother have 10 years.',['my brother is 10 years old']]].map(function(x){return ty('Corrija a frase: '+x[0],x[1],'Verifique o to be, o sujeito e a ordem das palavras. Idade usa to be + years old.')})],
+['Usos',[['I ___ 30 years old.',['am','have','are'],0,'Idade usa to be, nunca “have”.'],['She ___ happy today.',['is','have','does'],0,'Sentimento = to be.'],['They ___ 10 years old.',['have','are','is'],1,'They pede are.'],['___ you hungry?',['Is','Are','Do'],1,'Pergunta com you: Are you…?'],['___ he at work?',['Are','Is','Am'],1,'Localização usa to be: Is he…?'],['It ___ a big house.',['are','am','is'],2,'It pede is.'],['We ___ not tired.',['are','is','am'],0,'We pede are.'],['I ___ not from Portugal.',['is','am','are'],1,'I pede am.'],['Qual está correta?',['Is cold.','It is cold.','She cold.'],1,'Não se omite o sujeito (It).'],['Qual frase usa to be corretamente?',['I run fast.','I am run fast.','I are tall.'],0,'“Run” já é verbo de ação; não se mistura com am. (I am tall seria o correto para descrever.)']].map(function(q){return mc(q[0],q[1],q[2],q[3])})],
+['Vocabulário',DECKS.words.map(function(d){var o=DECKS.words.map(function(x){return x[0]});return mc('Como se diz “'+d[2]+'” em inglês?',o,o.indexOf(d[0]),d[0]+' '+d[1]+' = '+d[2])})]
+];
+var cur=-1;
+var gt=$('gt');
+var tb=document.createElement('button');tb.textContent='Todos ('+G.reduce(function(a,g){return a+g[1].length},0)+')';tb.onclick=function(){cur=-1;build2()};gt.appendChild(tb);
+G.forEach(function(g,i){var b=document.createElement('button');b.textContent=g[0]+' ('+g[1].length+')';b.onclick=function(){cur=i;build2()};gt.appendChild(b)});
+function build2(){
+ var box=$('qs');box.innerHTML='';done=0;ok=0;$('sc').textContent='';
+ var list=cur<0?G.reduce(function(a,g){return a.concat(g[1])},[]):G[cur][1],tot=list.length;
+ [].forEach.call(gt.children,function(b,i){b.classList.toggle('on',i-1===cur)});
+ list.forEach(function(q,i){
+  var d=document.createElement('div');d.className='q';
+  var p=document.createElement('p');p.textContent=(i+1)+'. '+q.p;d.appendChild(p);
+  var fb=document.createElement('div');fb.className='fb';
+  function fin(good,msg){done++;if(good)ok++;d.setAttribute('data-d','1');fb.textContent=(good?'✓ Correto! ':'✗ ')+msg;
+   if(done===tot){var pc=Math.round(ok*100/tot);$('sc').textContent='Você acertou '+ok+' de '+tot+' ('+pc+'%)'+(pc>=80?' 🎉 Pode dizer “entendi”!':' — releia a regra e tente de novo.');st.score['g'+cur]=Math.max(st.score['g'+cur]||0,pc);save()}}
+  if(q.t==='m'){
+   var o=document.createElement('div');o.className='opts';
+   q.o.forEach(function(t,j){var b=document.createElement('button');b.textContent=t;b.onclick=function(){if(d.getAttribute('data-d'))return;var g=j===q.a;b.className=g?'right':'wrong';if(!g)o.children[q.a].className='right';fin(g,q.w)};o.appendChild(b)});
+   d.appendChild(o);
+  }else{
+   var inp=document.createElement('input');inp.placeholder='Digite em inglês…';inp.setAttribute('autocomplete','off');inp.setAttribute('autocapitalize','off');
+   var bt=document.createElement('button');bt.className='btn';bt.textContent='Verificar';
+   var go=function(){if(d.getAttribute('data-d')||!inp.value.trim())return;var v=norm(inp.value),g=q.a.some(function(x){return norm(x)===v});inp.disabled=true;bt.disabled=true;fin(g,(g?'':'Resposta: '+q.a[0].replace(/'/g,'’')+'. ')+q.w)};
+   bt.onclick=go;inp.onkeydown=function(e){if(e.key==='Enter')go()};
+   d.appendChild(inp);d.appendChild(bt);
+  }
+  d.appendChild(fb);box.appendChild(d);
+ });
+}
+$('rs').onclick=build2;
+
+show(0);build2();card();
+})();
+</script>
+</body>
+</html>
